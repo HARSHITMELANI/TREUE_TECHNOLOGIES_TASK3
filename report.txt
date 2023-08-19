@@ -1,0 +1,29 @@
+Introduction:
+In this project, Harshit Melani from True Technologies developed an email spam detection system using machine learning algorithms. The goal was to create an efficient system that can accurately classify incoming emails as either spam or non-spam (ham). The project involved data preprocessing, feature extraction, model training, and the creation of a Graphical User Interface (GUI) to provide real-time spam detection.
+
+Methods:
+
+Data Preprocessing:
+
+Imported necessary libraries: Pandas, NLTK, NumPy.
+Loaded the dataset 'spam.csv' using Pandas, considering the appropriate encoding.
+Dropped irrelevant columns ('Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4') from the DataFrame.
+Mapped 'ham' and 'spam' labels to numeric values (0 and 1).
+Feature Extraction:
+
+Utilized the TF-IDF (Term Frequency-Inverse Document Frequency) vectorization to convert text data into numerical features.
+Split the dataset into training and testing sets using train_test_split from sklearn.model_selection.
+Model Training:
+
+Employed Logistic Regression as the classifier model.
+Fitted the model on the training data and evaluated its accuracy on both training and testing sets.
+Model Deployment:
+
+Created a function to classify input emails as spam or ham using the trained model and vectorizer.
+Pickled both the trained model and TF-IDF vectorizer for later use in the GUI.
+Creating a GUI for Spam Detection:
+
+Utilized the tkinter library to build a GUI for real-time email spam detection.
+Loaded the pre-trained Logistic Regression model and TF-IDF vectorizer.
+Designed an entry field for users to input an email.
+Implemented a detection function to classify the input email as spam or ham based on the trained model's prediction.
